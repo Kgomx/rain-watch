@@ -18,18 +18,18 @@
 </style></head>
 <body><div class="wrap">
   <h1>Rain Watch SG</h1>
-  <div class="sub">forecast updated 2026-07-26 02:06 SGT (UTC+8) · gauges updated 2026-07-26 09:05 SGT (UTC+8)</div>
+  <div class="sub">forecast updated 2026-07-26 02:06 SGT (UTC+8) · gauges updated 2026-07-26 12:35 SGT (UTC+8)</div>
   
   
   <div class="panel" style="margin-bottom:18px;">
     <h2 style="font-size:12px;text-transform:uppercase;color:#7f9aab;margin:0 0 10px;">Current weather — Thundery Showers</h2>
-    <div class="stats" style="margin-bottom:0;"><div class="stat"><b>26.2°C</b><span>Current avg. temperature</span></div><div class="stat"><b>93%</b><span>Current avg. humidity</span></div><div class="stat"><b>24–32°C</b><span>Today's range</span></div></div>
+    <div class="stats" style="margin-bottom:0;"><div class="stat"><b>27.1°C</b><span>Current avg. temperature</span></div><div class="stat"><b>88%</b><span>Current avg. humidity</span></div><div class="stat"><b>24–32°C</b><span>Today's range</span></div></div>
   </div>
   
   <div class="stats">
     <div class="stat"><b>47</b><span>Towns in forecast</span></div>
     <div class="stat"><b>0</b><span>Forecast as rain/showers</span></div>
-    <div class="stat"><b>3</b><span>Gauges actually recording rain</span></div>
+    <div class="stat"><b>12</b><span>Gauges actually recording rain</span></div>
   </div>
   <div class="panel">
     <h2 style="font-size:12px;text-transform:uppercase;color:#7f9aab;margin:0 0 10px;">Weather by town</h2>
@@ -43,7 +43,7 @@
         maxZoom: 18
       }).addTo(map);
 
-      var heatPoints = [[1.36019, 103.85335, 0.2], [1.35028, 103.855, 0.2], [1.3443, 103.9441, 2.2], [1.357, 103.904, 0.2], [1.3418, 103.8339, 0.2], [1.32575, 103.93969, 3.8], [1.3679, 103.9489, 0.2], [1.3678, 103.9823, 0.2], [1.3133, 103.962, 0.6]];
+      var heatPoints = [[1.37998, 103.87639, 4.6], [1.36019, 103.85335, 0.8], [1.35028, 103.855, 0.2], [1.4028, 103.9095, 4.2], [1.35691, 103.89088, 0.2], [1.37, 103.8271, 1.8], [1.38666, 103.89797, 0.2], [1.42111, 103.84472, 4.2], [1.3679, 103.9489, 0.2], [1.3704, 103.8046, 1.4], [1.4114, 103.8627, 6.4], [1.3793, 103.85, 3.6], [1.4168, 103.9673, 0.2], [1.3715, 103.9642, 0.4], [1.39027, 103.87412, 6.4], [1.39316, 103.87412, 3.2], [1.41457, 103.83106, 4.4]];
       if (heatPoints.length > 0) {
         L.heatLayer(heatPoints, {
           radius: 45, blur: 35, max: 8, minOpacity: 0.35,
@@ -61,7 +61,7 @@
         L.marker([t.lat, t.lon], {icon: icon}).addTo(map).bindTooltip(t.name + ': ' + t.text);
       });
 
-      var gauges = [{"lat": 1.3443, "lon": 103.9441, "mm": 2.2, "name": "Simei Avenue"}, {"lat": 1.32575, "lon": 103.93969, "mm": 3.8, "name": "Bedok Stadium"}, {"lat": 1.3133, "lon": 103.962, "mm": 0.6, "name": "East Coast Parkway"}];
+      var gauges = [{"lat": 1.37998, "lon": 103.87639, "mm": 4.6, "name": "Yio Chu Kang Road"}, {"lat": 1.36019, "lon": 103.85335, "mm": 0.8, "name": "Ang Mo Kio Avenue 10"}, {"lat": 1.4028, "lon": 103.9095, "mm": 4.2, "name": "Punggol Central"}, {"lat": 1.37, "lon": 103.8271, "mm": 1.8, "name": "Upper Thomson Road"}, {"lat": 1.42111, "lon": 103.84472, "mm": 4.2, "name": "Yishun Ring Road"}, {"lat": 1.3704, "lon": 103.8046, "mm": 1.4, "name": "Upper Peirce Reservoir Park"}, {"lat": 1.4114, "lon": 103.8627, "mm": 6.4, "name": "Seletar Aerospace View"}, {"lat": 1.3793, "lon": 103.85, "mm": 3.6, "name": "Ang Mo Kio Avenue 5"}, {"lat": 1.3715, "lon": 103.9642, "mm": 0.4, "name": "Pasir Ris Walk"}, {"lat": 1.39027, "lon": 103.87412, "mm": 6.4, "name": "S908"}, {"lat": 1.39316, "lon": 103.87412, "mm": 3.2, "name": "S907"}, {"lat": 1.41457, "lon": 103.83106, "mm": 4.4, "name": "S902"}];
       gauges.forEach(function(g) {
         L.circle([g.lat, g.lon], {
           radius: 700 + Math.min(g.mm, 20) * 100,
