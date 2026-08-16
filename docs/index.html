@@ -18,18 +18,18 @@
 </style></head>
 <body><div class="wrap">
   <h1>Rain Watch SG</h1>
-  <div class="sub">forecast updated 2026-08-16 19:26 SGT (UTC+8) · gauges updated 2026-08-16 19:20 SGT (UTC+8)</div>
+  <div class="sub">forecast updated 2026-08-16 19:36 SGT (UTC+8) · gauges updated 2026-08-16 19:40 SGT (UTC+8)</div>
   
   
   <div class="panel" style="margin-bottom:18px;">
     <h2 style="font-size:12px;text-transform:uppercase;color:#7f9aab;margin:0 0 10px;">Current weather — Thundery Showers</h2>
-    <div class="stats" style="margin-bottom:0;"><div class="stat"><b>28.4°C</b><span>Current avg. temperature</span></div><div class="stat"><b>83%</b><span>Current avg. humidity</span></div><div class="stat"><b>26–34°C</b><span>Today's range</span></div></div>
+    <div class="stats" style="margin-bottom:0;"><div class="stat"><b>27.7°C</b><span>Current avg. temperature</span></div><div class="stat"><b>86%</b><span>Current avg. humidity</span></div><div class="stat"><b>26–34°C</b><span>Today's range</span></div></div>
   </div>
   
   <div class="stats">
     <div class="stat"><b>47</b><span>Towns in forecast</span></div>
     <div class="stat"><b>47</b><span>Forecast as rain/showers</span></div>
-    <div class="stat"><b>23</b><span>Gauges actually recording rain</span></div>
+    <div class="stat"><b>17</b><span>Gauges actually recording rain</span></div>
   </div>
   <div class="panel">
     <h2 style="font-size:12px;text-transform:uppercase;color:#7f9aab;margin:0 0 10px;">Weather by town</h2>
@@ -43,7 +43,7 @@
         maxZoom: 18
       }).addTo(map);
 
-      var heatPoints = [[1.36491, 103.75065, 3.3], [1.29911, 103.88289, 2], [1.33701, 103.71828, 2.2], [1.28987, 103.82364, 1.2], [1.32251, 103.80139, 1], [1.30574, 103.87817, 0.4], [1.32319, 103.76714, 0.4], [1.2841, 103.7888, 1.2], [1.3318, 103.7762, 0.2], [1.295, 103.8622, 0.6], [1.2824, 103.7545, 0.4], [1.2504, 103.8275, 0.2], [1.3823, 103.7607, 7], [1.3858, 103.7119, 0.2], [1.3087, 103.818, 0.2], [1.2799, 103.8703, 2.4], [1.35167, 103.72195, 6.5], [1.34703, 103.70073, 1], [1.27472, 103.80389, 0.8], [1.29984, 103.80264, 0.8], [1.2923, 103.7815, 0.4], [1.31622, 103.7837, 0.2], [1.33742, 103.76699, 0.4], [1.3082, 103.71, 0.2], [1.2937, 103.8127, 0.4], [1.3325, 103.755, 0.8], [1.3003, 103.8372, 0.8], [1.3106, 103.8365, 0.8], [1.4388, 103.7017, 0.6], [1.30167, 103.76444, 0.2]];
+      var heatPoints = [[1.36491, 103.75065, 0.4], [1.29911, 103.88289, 2.6], [1.31944, 103.88194, 0.2], [1.3443, 103.9441, 0.2], [1.28987, 103.82364, 0.2], [1.32575, 103.93969, 4.4], [1.30574, 103.87817, 1.8], [1.44003, 103.76904, 2.8], [1.42918, 103.75711, 2.4], [1.295, 103.8622, 0.8], [1.305, 103.9112, 4.8], [1.3823, 103.7607, 0.6], [1.4387, 103.736, 2], [1.3858, 103.7119, 1.2], [1.3704, 103.8046, 1.2], [1.3214, 103.8577, 0.6], [1.2799, 103.8703, 0.2], [1.35167, 103.72195, 0.2], [1.3793, 103.85, 0.2], [1.27472, 103.80389, 0.2], [1.30568, 103.90093, 4.2], [1.3325, 103.755, 0.4], [1.3003, 103.8372, 0.4], [1.307, 103.8907, 3], [1.3106, 103.8365, 0.2], [1.4388, 103.7017, 0.2]];
       if (heatPoints.length > 0) {
         L.heatLayer(heatPoints, {
           radius: 45, blur: 35, max: 8, minOpacity: 0.35,
@@ -61,7 +61,7 @@
         L.marker([t.lat, t.lon], {icon: icon}).addTo(map).bindTooltip(t.name + ': ' + t.text);
       });
 
-      var gauges = [{"lat": 1.36491, "lon": 103.75065, "mm": 3.3, "name": "Bukit Batok Street 34"}, {"lat": 1.29911, "lon": 103.88289, "mm": 2, "name": "Tanjong Rhu"}, {"lat": 1.33701, "lon": 103.71828, "mm": 2.2, "name": "Taman Jurong Green"}, {"lat": 1.28987, "lon": 103.82364, "mm": 1.2, "name": "Henderson Road"}, {"lat": 1.32251, "lon": 103.80139, "mm": 1, "name": "Coronation Road"}, {"lat": 1.30574, "lon": 103.87817, "mm": 0.4, "name": "Kallang Practice Track"}, {"lat": 1.32319, "lon": 103.76714, "mm": 0.4, "name": "Clementi Park"}, {"lat": 1.2841, "lon": 103.7888, "mm": 1.2, "name": "South Buona Vista Road"}, {"lat": 1.295, "lon": 103.8622, "mm": 0.6, "name": "Nicoll Highway"}, {"lat": 1.2824, "lon": 103.7545, "mm": 0.4, "name": "West Coast Highway"}, {"lat": 1.3823, "lon": 103.7607, "mm": 7, "name": "Bukit Panjang Road"}, {"lat": 1.2799, "lon": 103.8703, "mm": 2.4, "name": "Marina Gardens Drive"}, {"lat": 1.35167, "lon": 103.72195, "mm": 6.5, "name": "Jurong West Street 42"}, {"lat": 1.34703, "lon": 103.70073, "mm": 1, "name": "Jurong West Street 73"}, {"lat": 1.27472, "lon": 103.80389, "mm": 0.8, "name": "Malan Road"}, {"lat": 1.29984, "lon": 103.80264, "mm": 0.8, "name": "Margaret Drive"}, {"lat": 1.2923, "lon": 103.7815, "mm": 0.4, "name": "Kent Ridge Road"}, {"lat": 1.33742, "lon": 103.76699, "mm": 0.4, "name": "S903"}, {"lat": 1.2937, "lon": 103.8127, "mm": 0.4, "name": "Alexandra Road"}, {"lat": 1.3325, "lon": 103.755, "mm": 0.8, "name": "Old Toh Tuck Road"}, {"lat": 1.3003, "lon": 103.8372, "mm": 0.8, "name": "Somerset Road"}, {"lat": 1.3106, "lon": 103.8365, "mm": 0.8, "name": "Scotts Road"}, {"lat": 1.4388, "lon": 103.7017, "mm": 0.6, "name": "Lim Chu Kang Road"}];
+      var gauges = [{"lat": 1.36491, "lon": 103.75065, "mm": 0.4, "name": "Bukit Batok Street 34"}, {"lat": 1.29911, "lon": 103.88289, "mm": 2.6, "name": "Tanjong Rhu"}, {"lat": 1.32575, "lon": 103.93969, "mm": 4.4, "name": "Bedok Stadium"}, {"lat": 1.30574, "lon": 103.87817, "mm": 1.8, "name": "Kallang Practice Track"}, {"lat": 1.44003, "lon": 103.76904, "mm": 2.8, "name": "Woodlands Centre"}, {"lat": 1.42918, "lon": 103.75711, "mm": 2.4, "name": "Kranji Road"}, {"lat": 1.295, "lon": 103.8622, "mm": 0.8, "name": "Nicoll Highway"}, {"lat": 1.305, "lon": 103.9112, "mm": 4.8, "name": "Marine Parade Road"}, {"lat": 1.3823, "lon": 103.7607, "mm": 0.6, "name": "Bukit Panjang Road"}, {"lat": 1.4387, "lon": 103.736, "mm": 2, "name": "Kranji Way"}, {"lat": 1.3858, "lon": 103.7119, "mm": 1.2, "name": "S23"}, {"lat": 1.3704, "lon": 103.8046, "mm": 1.2, "name": "Upper Peirce Reservoir Park"}, {"lat": 1.3214, "lon": 103.8577, "mm": 0.6, "name": "Towner Road"}, {"lat": 1.30568, "lon": 103.90093, "mm": 4.2, "name": "S909"}, {"lat": 1.3325, "lon": 103.755, "mm": 0.4, "name": "Old Toh Tuck Road"}, {"lat": 1.3003, "lon": 103.8372, "mm": 0.4, "name": "Somerset Road"}, {"lat": 1.307, "lon": 103.8907, "mm": 3, "name": "Poole Road"}];
       gauges.forEach(function(g) {
         L.circle([g.lat, g.lon], {
           radius: 700 + Math.min(g.mm, 20) * 100,
